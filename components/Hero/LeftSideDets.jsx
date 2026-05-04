@@ -5,6 +5,7 @@ import { BsGithub } from "react-icons/bs";
 import Link from "next/link";
 import { HoverBorderGradient } from "../ui/hover-border-gradient";
 import { TextGenerateEffect } from "../ui/text-generate-effect";
+import Button from "../Button";
 
 const LeftSideDets = () => {
   // Text Generation
@@ -32,15 +33,7 @@ const LeftSideDets = () => {
 
       <div className="mt-6 flex md:justify-start justify-center">
         {/* Button */}
-        <HoverBorderGradient
-          containerClassName="rounded-xl"
-          as="button"
-          className="dark:bg-black bg-white text-black dark:text-white flex items-center space-x-2 active:scale-95 transition-all duration-500 px-7 py-3 "
-        >
-          <p className="font-semibold text-[16px] flex items-center gap-1">
-            Say Hello <TbLocation />
-          </p>
-        </HoverBorderGradient>
+        <Button> Say Hello <TbLocation /></Button>
 
         {/* Divider */}
         <div className="border opacity-20 mx-5 my-1.5"></div>
