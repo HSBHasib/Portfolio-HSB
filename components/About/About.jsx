@@ -7,7 +7,7 @@ const AboutPage = () => {
     <div className="h-[80vh] mt-12 max-w-5xl mx-auto">
       {/* About Heading */}
       <div className="space-y-2">
-        <h2 className="bg-gradient-to-b from-neutral-50 to-neutral-400 bg-clip-text text-xl md:text-4xl font-semibold text-transparent">
+        <h2 className="bg-gradient-to-b from-neutral-50 to-neutral-400 bg-clip-text text-xl md:text-4xl font-bold text-transparent">
           About
         </h2>
         <p className="bg-gradient-to-b from-neutral-50 to-neutral-400 bg-clip-text text-sm font-semibold text-transparent">
@@ -19,7 +19,7 @@ const AboutPage = () => {
       <div className="flex justify-between gap-10 mt-10">
         {/* Logo */}
         <div className="flex-1">
-          <div className="w-full h-full bg-[#111]/80 rounded-xl hover:scale-105 transition-all duration-500">
+          <div className="w-full h-full bg-[#111]/80 rounded-xl hover:scale-105 transition-all duration-500 shadow">
             <Image
               src="/logohsb.png"
               alt="hasibLogo"
@@ -33,9 +33,9 @@ const AboutPage = () => {
 
         {/* Personal Details */}
         <div className="flex-1 text-left">
-          <div className="flex justify-between items-center gap-5">
+          <div className="flex justify-between items-center gap-3">
             {/* Developer */}
-            <div className="bg-[#111] flex-1 rounded-lg hover:scale-105 transition-all duration-500">
+            <div className="bg-[#111] flex-1 rounded-xl hover:scale-105 transition-all duration-500 shadow border-2 border-gray-300/10">
               <div className="flex flex-col justify-center items-center h-30 space-y-1">
                 <p className="text-neutral-300 text-2xl">Developer</p>
                 <p className="text-neutral-300 text-sm font-semibold">
@@ -45,7 +45,7 @@ const AboutPage = () => {
             </div>
 
             {/* Projects */}
-            <div className="bg-[#111] flex-1 rounded-lg hover:scale-105 transition-all duration-500">
+            <div className="bg-[#111] flex-1 rounded-xl hover:scale-105 transition-all duration-500 shadow border-2 border-gray-300/10">
               <div className="flex flex-col justify-center items-center space-y-1 h-30">
                 <p className="text-neutral-300 text-3xl">10+</p>
                 <p className="text-neutral-300 text-sm font-semibold">
@@ -54,7 +54,7 @@ const AboutPage = () => {
               </div>
             </div>
 
-            <div className="bg-[#111] flex-1 rounded-lg hover:scale-105 transition-all duration-500">
+            <div className="bg-[#111] flex-1 rounded-xl hover:scale-105 transition-all duration-500 shadow border-2 border-gray-300/10">
               <div className="flex flex-col justify-center items-center h-30 space-y-1">
                 <p className="text-neutral-300 text-2xl">Support</p>
                 <p className="text-neutral-300 text-sm font-semibold">

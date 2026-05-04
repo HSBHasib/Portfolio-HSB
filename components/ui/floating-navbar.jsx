@@ -98,6 +98,7 @@ import {
 import { cn } from "@/lib/utils";
 import { LuArrowDown } from "react-icons/lu";
 import Link from "next/link";
+import Image from "next/image";
 
 export const FloatingNav = ({ navItems, className }) => {
   const { scrollYProgress } = useScroll();
@@ -127,7 +128,7 @@ export const FloatingNav = ({ navItems, className }) => {
         }}
         transition={{ duration: 0.2 }}
         className={cn(
-          "flex max-w-fit fixed top-5 inset-x-0 mx-auto z-[5000] items-center justify-center px-4", // top-5 kora holo
+          "flex max-w-fit fixed top-5 inset-x-0 mx-auto z-[5000] items-center justify-center px-4",
           className
         )}
       >
