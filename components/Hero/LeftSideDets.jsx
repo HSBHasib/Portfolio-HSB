@@ -13,7 +13,7 @@ const LeftSideDets = () => {
 
   return (
     <>
-      <p className=" bg-gradient-to-b from-neutral-50 to-neutral-400 bg-clip-text text-2xl md:text-4xl font-bold text-transparent md:text-xl">
+      <p className="bg-gradient-to-b from-neutral-50 to-neutral-400 bg-clip-text text-2xl md:text-4xl font-bold text-transparent md:text-xl">
         Hey, I'm
       </p>
       <h1 className="bg-opacity-50 bg-gradient-to-b from-neutral-50 to-neutral-400 bg-clip-text text-4xl font-bold text-transparent md:text-6xl mt-0.5 md:mt-1">

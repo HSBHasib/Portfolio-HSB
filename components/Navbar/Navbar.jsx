@@ -3,7 +3,7 @@ import React from "react";
 import { IconHome, IconMessage } from "@tabler/icons-react";
 import { PiGraduationCap } from "react-icons/pi";
 import { GoStack } from "react-icons/go";
-
+// import logo from '/logo.png'
 
 import { FloatingNav } from "../ui/floating-navbar";
 import { TbLocation } from "react-icons/tb";
@@ -41,7 +41,10 @@ export function Navbar() {
     }
   ];
   return (
-    <div className="relative w-full">
+    <div className="relative w-full ">
+      {/* <div>
+        <Image src={logo} alt='hasibLogo' width={30} height={30} />
+      </div> */}
       <FloatingNav navItems={navItems} />
     </div>
   );

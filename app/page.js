@@ -1,3 +1,4 @@
+import AboutPage from "@/components/About/About";
 import HeroPage from "@/components/Hero/Hero";
 import { Navbar } from "@/components/Navbar/Navbar";
 import { FloatingNav } from "@/components/ui/floating-navbar";
@@ -8,6 +9,7 @@ export default function Home() {
    <div className="text-5xl font-bold text-center text-red-10">
     <Navbar />
     <HeroPage />
+    <AboutPage />
    </div>
   );
 }
