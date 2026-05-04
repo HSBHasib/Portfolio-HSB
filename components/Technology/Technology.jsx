@@ -9,7 +9,7 @@ import Skills from "../Skills/Skills";
 
 const Technology = () => {
   return (
-    <div className="h-screen mt-15 max-w-5xl mx-auto">
+    <div className="h-screen md:mt-15 mt-7 max-w-5xl mx-auto">
       {/* Technologies Header */}
       <div className="space-y-0.5">
         <h2 className="bg-gradient-to-b from-neutral-50 to-neutral-400 bg-clip-text text-xl md:text-4xl font-bold text-transparent leading-relaxed">

@@ -1,10 +1,9 @@
 import Image from "next/image";
 import React from "react";
-// import logo from '/hsblogo.png'
 
 const AboutPage = () => {
   return (
-    <div className="h-[80vh] mt-12 max-w-5xl mx-auto">
+    <div className="h-full md:mt-12 mt-6 max-w-5xl mx-auto">
       {/* About Heading */}
       <div className="space-y-2">
         <h2 className="bg-gradient-to-b from-neutral-50 to-neutral-400 bg-clip-text text-xl md:text-4xl font-bold text-transparent">
@@ -16,9 +15,9 @@ const AboutPage = () => {
       </div>
 
       {/* Main Info */}
-      <div className="flex justify-between gap-10 mt-10">
+      <div className="md:flex md:justify-between gap-10 mt-10 max-[500px]:mx-4 max-[500px]:space-y-8 ">
         {/* Logo */}
-        <div className="flex-1">
+        <div className="md:flex-1">
           <div className="w-full h-full bg-[#111]/80 rounded-xl hover:scale-105 transition-all duration-500 shadow">
             <Image
               src="/logohsb.png"
@@ -28,11 +27,10 @@ const AboutPage = () => {
               className="w-full h-full"
             />
           </div>
-          {/* <p>H</p> */}
         </div>
 
         {/* Personal Details */}
-        <div className="flex-1 text-left">
+        <div className="md:flex-1 text-left">
           <div className="flex justify-between items-center gap-3">
             {/* Developer */}
             <div className="bg-[#111] flex-1 rounded-xl hover:scale-105 transition-all duration-500 shadow border-2 border-gray-300/10">
