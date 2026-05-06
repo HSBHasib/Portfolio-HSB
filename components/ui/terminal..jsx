@@ -381,7 +381,7 @@ export function Terminal({
   return (
     <div
       ref={containerRef}
-      className={cn("mx-auto w-full max-w-xl px-4 font-mono text-xs", className)}>
+      className={cn("mx-auto w-full max-w-lg px-4 font-mono text-sm", className)}>
       <div
         className="overflow-hidden rounded-lg border border-neutral-800 bg-neutral-900 shadow-2xl">
         {/* Title Bar */}
@@ -395,7 +395,7 @@ export function Terminal({
               className="h-3 w-3 rounded-full bg-green-500 transition-colors hover:bg-green-600" />
           </div>
           <div className="flex-1 text-center">
-            <span className="truncate text-xs text-neutral-400">
+            <span className="truncate text-sm text-neutral-400">
               {username} — Skills
             </span>
           </div>
@@ -405,7 +405,7 @@ export function Terminal({
         {/* Terminal Content */}
         <div
           ref={contentRef}
-          className="no-visible-scrollbar h-80 overflow-y-auto p-4 font-mono">
+          className="no-visible-scrollbar h-full overflow-y-auto p-4 font-mono">
           {lines.map((line, i) => (
             <div key={i} className="leading-relaxed whitespace-pre-wrap">
               {line.type === "command" ? (

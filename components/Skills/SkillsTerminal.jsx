@@ -4,7 +4,7 @@ import { Terminal } from "../ui/terminal.";
 
 export function SkillsTeminal() {
   return (
-    <section id="mainDiv" className="w-full ">
+    <section id="mainDiv" className="w-full">
       <Terminal
         commands={[
           "Hasib skills",

@@ -1,6 +1,7 @@
 import AboutPage from "@/components/About/About";
 import HeroPage from "@/components/Hero/Hero";
 import { Navbar } from "@/components/Navbar/Navbar";
+import Qualification from "@/components/Qualifications/Qualification";
 import Technology from "@/components/Technology/Technology";
 import { FloatingNav } from "@/components/ui/floating-navbar";
 import Image from "next/image";
@@ -12,6 +13,7 @@ export default function Home() {
     <HeroPage />
     <AboutPage />
     <Technology />
+    <Qualification />
    </div>
   );
 }
