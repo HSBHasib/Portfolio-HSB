@@ -16,7 +16,7 @@ const Qualification = () => {
 
       <div className="max-w-4xl mx-auto mt-4">
         {/* Section Icon & Title */}
-        <div className="flex justify-center items-center gap-1 mb-8">
+        <div className="flex justify-center items-center gap-1 mb-5 ">
           <span className="text-2xl">🎓</span>
           <h2 className="bg-gradient-to-b from-neutral-50 to-neutral-400 bg-clip-text text-[16px] md:text-xl font-bold text-transparent leading-relaxed">
             Education

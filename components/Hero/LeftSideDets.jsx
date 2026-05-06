@@ -33,7 +33,7 @@ const LeftSideDets = () => {
 
       <div className="mt-6 flex md:justify-start justify-center">
         {/* Button */}
-        <Button> Say Hello <TbLocation /></Button>
+        <Button className='px-7 py-3'> Say Hello <TbLocation /></Button>
 
         {/* Divider */}
         <div className="border opacity-20 mx-5 my-1.5"></div>
