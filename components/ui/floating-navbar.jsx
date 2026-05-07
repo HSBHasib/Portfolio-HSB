@@ -1,92 +1,3 @@
-// "use client";
-// import React, { useState } from "react";
-// import {
-//   motion,
-//   AnimatePresence,
-//   useScroll,
-//   useMotionValueEvent,
-// } from "motion/react";
-// import { cn } from "@/lib/utils";
-
-// export const FloatingNav = ({ navItems, className }) => {
-//   const { scrollYProgress } = useScroll();
-//   const [visible, setVisible] = useState(false);
-
-//   useMotionValueEvent(scrollYProgress, "change", (current) => {
-//     if (typeof current === "number") {
-//       const direction = current - scrollYProgress.getPrevious();
-
-//       if (scrollYProgress.get() < 0.05) {
-//         setVisible(false);
-//       } else {
-//         if (direction < 0) {
-//           setVisible(true);
-//         } else {
-//           setVisible(false);
-//         }
-//       }
-//     }
-//   });
-
-//   return (
-//     <AnimatePresence mode="wait">
-//       <motion.div
-//         initial={{
-//           opacity: 1,
-//           y: -100,
-//         }}
-//         animate={{
-//           y: visible ? 0 : -100,
-//           opacity: visible ? 1 : 0,
-//         }}
-//         transition={{
-//           duration: 0.2,
-//         }}
-//         className={cn(
-//           "flex max-w-fit fixed top-10 inset-x-0 mx-auto z-[5000] items-center justify-center",
-//           className,
-//         )}
-//       >
-//         <div className="flex items-center justify-center gap-2 rounded-full border border-white/10 bg-white/80 px-2 py-1.5 shadow-lg shadow-black/10 backdrop-blur-md dark:border-white/10 dark:bg-black/50">
-//           {/* Nav items container */}
-//           <div className="flex items-center gap-1">
-//             {navItems?.map((navItem, idx) => (
-//               <a
-//                 key={`link-${idx}`}
-//                 href={navItem.link}
-//                 className={cn(
-//                   "relative flex items-center gap-1 rounded-full px-4 py-2 text-sm font-medium text-neutral-600 transition-colors hover:bg-neutral-100 hover:text-neutral-900 dark:text-neutral-300 dark:hover:bg-white/10 dark:hover:text-white",
-//                 )}
-//               >
-//                 <span className="block">{navItem.icon}</span>
-//                 <span className="block">{navItem.name}</span>
-//               </a>
-//             ))}
-//           </div>
-
-//           {/* Divider */}
-//           <div className="h-5 w-px bg-neutral-200 dark:bg-white/10" />
-
-//           {/* CTA Button */}
-//           <button className="relative rounded-full bg-neutral-900 px-4 py-2 text-sm font-medium text-white transition-all hover:bg-neutral-800 hover:shadow-lg hover:shadow-neutral-900/20 dark:bg-white dark:text-black dark:hover:bg-neutral-100 dark:hover:shadow-white/20">
-//             <span>Login</span>
-//           </button>
-//         </div>
-//       </motion.div>
-//     </AnimatePresence>
-//   );
-// };
-
-
-
-
-
-
-
-
-
-
-
 "use client";
 import React, { useState } from "react";
 import {
@@ -94,60 +5,95 @@ import {
   AnimatePresence,
   useScroll,
   useMotionValueEvent,
-} from "motion/react";
+} from "framer-motion";
 import { cn } from "@/lib/utils";
 import { LuArrowDown } from "react-icons/lu";
-import Link from "next/link";
-import Image from "next/image";
 
 export const FloatingNav = ({ navItems, className }) => {
   const { scrollYProgress } = useScroll();
-  const [visible, setVisible] = useState(false);
+  const [visible, setVisible] = useState(true);
+  const [showMore, setShowMore] = useState(false);
 
   useMotionValueEvent(scrollYProgress, "change", (current) => {
     if (typeof current === "number") {
       let direction = current - scrollYProgress.getPrevious();
-
       if (scrollYProgress.get() < 0.05) {
         setVisible(true);
       } else {
-        if (direction < 0) {
-          setVisible(true);
-        }
+        setVisible(direction < 0);
       }
     }
   });
 
+  const moreItems = [
+    { name: "Qualification", link: "#qualification" },
+    { name: "Technology", link: "#technology" },
+  ];
+
   return (
-    <AnimatePresence mode="wait">
-      <motion.div
-        initial={{ opacity: 1, y: -100 }}
-        animate={{
-          y: visible ? 0 : -100,
-          opacity: visible ? 1 : 0,
-        }}
-        transition={{ duration: 0.2 }}
-        className={cn(
-          "flex max-w-fit fixed top-5 inset-x-0 mx-auto z-[5000] items-center justify-center px-4",
-          className
-        )}
-      >
-        <div className="flex items-center justify-center gap-4 rounded-full border border-white/10 bg-black px-4 py-2 shadow-lg backdrop-blur-md dark:border-white/10 dark:bg-transparent">
+    <div className="relative">
+      <AnimatePresence mode="wait">
+        <motion.div
+          initial={{ opacity: 1, y: -100 }}
+          animate={{ y: visible ? 0 : -100, opacity: visible ? 1 : 0 }}
+          className={cn(
+            "flex items-center justify-center gap-4 rounded-full border border-white/10 bg-black/60 px-4 py-2 shadow-2xl backdrop-blur-lg dark:bg-transparent",
+            className,
+          )}
+        >
           <div className="flex items-center gap-2">
             {navItems?.map((navItem, idx) => (
-              <Link
+              <a
                 key={`link-${idx}`}
-                href={navItem.link}
-                className="relative flex items-center gap-1 px-2 py-1 text-sm font-medium text-neutral-600 hover:text-neutral-800 dark:text-neutral-300 dark:hover:text-white"
+                href={navItem.link} // Direct ID reference
+                className="relative flex items-center gap-1 px-3 py-1 text-sm font-medium text-neutral-300 hover:text-white transition-colors"
               >
                 <span>{navItem.icon}</span>
-                <span className="hidden sm:block text-xs md:text-sm">{navItem.name}</span>                
-              </Link>
+                <span className="hidden sm:block text-xs">{navItem.name}</span>
+              </a>
             ))}
-            <button className="relative flex items-center gap-1 px-2 py-1 text-sm font-medium text-neutral-600 hover:text-neutral-800 dark:text-neutral-300 dark:hover:text-white"><LuArrowDown className="h-4 w-4 text-neutral-500 dark:text-white" /> More</button>
+
+            {/* More Button with Toggle */}
+            <div className="relative">
+              <button
+                onClick={() => setShowMore(!showMore)}
+                className="flex items-center gap-1 px-3 py-1 text-sm font-medium text-neutral-300 hover:text-white transition-colors"
+              >
+                <LuArrowDown
+                  className={cn(
+                    "h-3 w-3 transition-transform",
+                    showMore && "rotate-180",
+                  )}
+                />
+                <span className="hidden sm:block text-xs">More</span>
+              </button>
+
+              {/* Glassy Dropdown */}
+              <AnimatePresence>
+                {showMore && (
+                  <motion.div
+                    initial={{ opacity: 0, scale: 0.95, y: 10 }}
+                    animate={{ opacity: 1, scale: 1, y: 0 }}
+                    exit={{ opacity: 0, scale: 0.95, y: 10 }}
+                    className="absolute top-full mt-4 right-0 w-48 rounded-2xl border border-white/10 bg-black/80 backdrop-blur-xl p-2 shadow-2xl"
+                  >
+                    {moreItems.map((item, i) => (
+                      <a
+                        key={i}
+                        href={item.link}
+                        onClick={() => setShowMore(false)}
+                        className="block px-4 py-2.5 text-sm text-neutral-400 hover:text-white hover:bg-white/5 rounded-xl transition-all"
+                      >
+                        {item.name}
+                      </a>
+                    ))}
+                  </motion.div>
+                )}
+              </AnimatePresence>
+            </div>
           </div>
-        </div>
-      </motion.div>
-    </AnimatePresence>
+        </motion.div>
+      </AnimatePresence>
+    </div>
   );
 };

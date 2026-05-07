@@ -31,7 +31,7 @@ const Footer = () => {
               <ul className="space-y-2 text-sm font-medium ml-0.5 opacity-88">
                 <li>
                   <Link
-                    href="https://www.facebook.com/"
+                    href="/"
                     className="hover:opacity-60 transition-opacity flex gap-2"
                   >
                     About
@@ -39,7 +39,7 @@ const Footer = () => {
                 </li>
                 <li>
                   <Link
-                    href="https://www.instagram.com/"
+                    href="/"
                     className="hover:opacity-60 transition-opacity flex gap-2"
                   >
                     Skills
@@ -47,7 +47,7 @@ const Footer = () => {
                 </li>
                 <li>
                   <Link
-                    href="https://www.linkedin.com/"
+                    href="/"
                     className="hover:opacity-60 transition-opacity flex gap-2 pl-0.5"
                   >
                     Projects
@@ -55,7 +55,7 @@ const Footer = () => {
                 </li>
                 <li>
                   <Link
-                    href="https://x.com/"
+                    href="/"
                     className="hover:opacity-60 transition-opacity flex gap-2 pl-0.5"
                   >
                     Contact

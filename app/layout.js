@@ -1,4 +1,6 @@
+import SmoothScroll from "@/components/SmoothScroll";
 import "./globals.css";
+import { Navbar } from "@/components/Navbar/Navbar";
 
 export const metadata = {
   title: "Hasib Portfolio",
@@ -7,11 +9,13 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html
-      lang="en"
-      className={`h-full antialiased`}
-    >
-      <body className="min-h-full flex flex-col ">{children}</body>
+    <html lang="en">
+      <body>
+        <SmoothScroll>
+          <Navbar />
+          {children}
+        </SmoothScroll>
+      </body>
     </html>
   );
 }
