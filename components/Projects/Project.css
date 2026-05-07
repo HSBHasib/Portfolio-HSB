@@ -1,0 +1,72 @@
+/* components/project/Project.css */
+
+/* Swiper Container Gap */
+.mySwiper {
+    padding-bottom: 95px !important; 
+    overflow: visible !important;
+}
+
+/* Standard Bullet - Mobile First */
+.swiper-pagination-bullet {
+    width: 44px !important;   
+    height: 44px !important;
+    line-height: 44px !important;
+    font-size: 16px !important; 
+    font-weight: 800;           
+    color: #fff !important;
+    background: rgba(255, 255, 255, 0.12) !important;
+    border: 1.5px solid rgba(255, 255, 255, 0.2) !important;
+    border-radius: 14px !important; 
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275) !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    opacity: 0.9 !important;
+    margin: 0 4px !important;
+}
+
+/* Active Bullet */
+.swiper-pagination-bullet-active {
+    background: #7C3AED !important;
+    border-color: #a78bfa !important;
+    opacity: 1 !important;
+    transform: scale(1.1) translateY(-3px) !important; 
+    box-shadow: 0 10px 25px -5px rgba(124, 58, 237, 0.6) !important;
+}
+
+/* Neighboring Dots Visibility */
+.swiper-pagination-bullet-active-main {
+    transform: scale(1) !important;
+    opacity: 1 !important;
+}
+
+/* Next/Prev Dots - "..." Feel */
+.swiper-pagination-bullet-active-next,
+.swiper-pagination-bullet-active-prev {
+    transform: scale(0.75) !important; 
+    opacity: 0.5 !important;
+    font-size: 0px !important;
+    background: #444 !important;
+}
+
+/* Far Dots - Small Signal */
+.swiper-pagination-bullet-active-next-next,
+.swiper-pagination-bullet-active-prev-prev {
+    transform: scale(0.5) !important;
+    opacity: 0.2 !important;
+    font-size: 0px !important;
+    background: #222 !important;
+}
+
+/* Tablet & Desktop Adjustments */
+@media (min-width: 768px) {
+    .swiper-pagination-bullet {
+        width: 36px !important;
+        height: 36px !important;
+        line-height: 36px !important;
+        font-size: 14px !important;
+    }
+    .swiper-pagination {
+        gap: 10px !important;
+    }
+}

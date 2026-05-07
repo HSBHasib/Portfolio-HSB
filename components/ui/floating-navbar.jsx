@@ -26,8 +26,9 @@ export const FloatingNav = ({ navItems, className }) => {
   });
 
   const moreItems = [
+    { name: "About-Me", link: "#about" },
     { name: "Qualification", link: "#qualification" },
-    { name: "Technology", link: "#technology" },
+    { name: "Skills", link: "#skills" },
   ];
 
   return (

@@ -1,55 +1,84 @@
-import React from "react";
-import { FaBootstrap, FaGitAlt, FaGithub, FaNodeJs } from "react-icons/fa";
-import { SiExpress } from "react-icons/si";
+"use client";
+
+import React, { useState, useEffect } from "react";
+import { motion } from "framer-motion";
+import { FaNodeJs, FaGitAlt, FaGithub } from "react-icons/fa";
+import { SiExpress, SiMongodb } from "react-icons/si";
 import { GrReactjs } from "react-icons/gr";
 import { RiNextjsLine, RiTailwindCssFill } from "react-icons/ri";
-import { SiMongodb } from "react-icons/si";
 import TechIcons from "./TechIcons";
 import Skills from "../Skills/Skills";
 
 const Technology = () => {
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    // Artificial delay to show skeleton loading
+    const timer = setTimeout(() => setLoading(false), 1200);
+    return () => clearTimeout(timer);
+  }, []);
+
+  const techStack = [
+    { name: "Tailwind", icon: <RiTailwindCssFill />, color: "text-cyan-400" },
+    { name: "Javascript", icon: "JS", color: "text-yellow-300 font-bold" },
+    { name: "React", icon: <GrReactjs />, color: "text-cyan-400" },
+    { name: "Next.js", icon: <RiNextjsLine />, color: "text-white" },
+    { name: "Node.js", icon: <FaNodeJs />, color: "text-green-600" },
+    { name: "Express", icon: <SiExpress />, color: "text-neutral-400" },
+    { name: "MongoDB", icon: <SiMongodb />, color: "text-green-600" },
+    { name: "Git", icon: <FaGitAlt />, color: "text-orange-600" },
+    { name: "Github", icon: <FaGithub />, color: "text-white" },
+  ];
+
   return (
-    <div className="h-full md:mt-15 mt-7 max-w-5xl mx-auto">
-      {/* Technologies Header */}
-      <div className="space-y-0.5">
-        <h2 className="bg-gradient-to-b from-neutral-50 to-neutral-400 bg-clip-text text-xl md:text-4xl font-bold text-transparent leading-relaxed">
-          Technogies
+    <div
+      id="techstack"
+      className="h-full mt-8 max-w-5xl mx-auto px-4"
+    >
+      {/* Header Animation */}
+      <motion.div
+        initial={{ opacity: 0, x: -20 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        viewport={{ once: true }}
+        className="space-y-1"
+      >
+        <h2 className="bg-gradient-to-b from-neutral-50 to-neutral-400 bg-clip-text text-2xl md:text-4xl font-bold text-transparent">
+          Technologies
         </h2>
-        <p className="bg-gradient-to-b from-neutral-50 to-neutral-400 bg-clip-text text-sm font-semibold text-transparent">
+        <p className="text-neutral-500 text-sm font-medium italic">
           My Tech Stack
         </p>
+      </motion.div>
+
+      {/* Tech Grid */}
+      <div className="flex flex-wrap gap-6 justify-center mt-10">
+        {loading
+          ? // Skeleton Loading State
+            Array(9)
+              .fill(0)
+              .map((_, i) => (
+                <div
+                  key={i}
+                  className="flex flex-col items-center gap-2 animate-pulse"
+                >
+                  <div className="bg-white/5 h-14 w-14 rounded-full border border-white/5"></div>
+                  <div className="h-2 w-10 bg-white/5 rounded"></div>
+                </div>
+              ))
+          : // Actual Tech Icons
+            techStack.map((tech, index) => (
+              <TechIcons
+                key={index}
+                index={index}
+                className={tech.color}
+                icon={tech.icon}
+              >
+                {tech.name}
+              </TechIcons>
+            ))}
       </div>
 
-      {/* Main Tech Content */}
-      <div className="flex flex-wrap gap-5 justify-center mt-7">
-        {/* Js */}
-        <TechIcons className={`text-cyan-400`} icon={<RiTailwindCssFill />}>
-          Tailwind
-        </TechIcons>
-        <TechIcons className={`text-yellow-300 font-semibold`} icon="JS">
-          Javascript
-        </TechIcons>
-        <TechIcons className={`text-cyan-400`} icon={<GrReactjs size={24} />}>
-          React
-        </TechIcons>
-        <TechIcons icon={<RiNextjsLine size={24} />}>Next.js</TechIcons>
-        <TechIcons className={`text-green-600`} icon={<FaNodeJs size={24} />}>
-          Node.js
-        </TechIcons>
-        <TechIcons icon={<SiExpress size={24} />}>Express</TechIcons>
-        <TechIcons className={`text-green-600`} icon={<SiMongodb size={24} />}>
-          MongoDB
-        </TechIcons>
-        <TechIcons className={`text-orange-600`} icon={<FaGitAlt size={24} />}>
-          Git
-        </TechIcons>
-        <TechIcons icon={<FaGithub size={24} />}>Github</TechIcons>
-      </div>
-
-      {/* Skills Section */}
-      <>
-        <Skills />
-      </>
+      <Skills />
     </div>
   );
 };

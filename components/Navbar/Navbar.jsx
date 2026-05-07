@@ -9,9 +9,9 @@ import { FloatingNav } from "../ui/floating-navbar";
 
 export function Navbar() {
   const navItems = [
-    { name: "Home", link: "#home", icon: <IconHome className="h-4 w-4" /> },
+    { name: "Home", link: "/", icon: <IconHome className="h-4 w-4" /> },
     { name: "Tech Stack", link: "#techstack", icon: <GoStack className="h-4 w-4" /> },
-    { name: "Projects", link: "#project", icon: <IconMessage className="h-4 w-4" /> },
+    { name: "Projects", link: "#projects", icon: <IconMessage className="h-4 w-4" /> },
     { name: "Contact", link: "#contact", icon: <TbLocation className="h-4 w-4" /> }
   ];
 
