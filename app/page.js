@@ -1,11 +1,11 @@
 import AboutPage from "@/components/About/About";
+import Contact from "@/components/Contact/Contact";
 import HeroPage from "@/components/Hero/Hero";
 import { Navbar } from "@/components/Navbar/Navbar";
 import { Projects } from "@/components/Projects/Projects";
 import Qualification from "@/components/Qualifications/Qualification";
 import Technology from "@/components/Technology/Technology";
-import { FloatingNav } from "@/components/ui/floating-navbar";
-import Image from "next/image";
+
 
 export default function Home() {
   return (
@@ -16,6 +16,7 @@ export default function Home() {
     <Technology />
     <Qualification />
     <Projects />
+    <Contact />
    </div>
   );
 }
