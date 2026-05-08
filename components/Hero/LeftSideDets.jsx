@@ -50,12 +50,12 @@ const LeftSideDets = ({ isLoaded }) => {
       <motion.div variants={itemVariants} className="mt-6 flex md:justify-start justify-center">
         <Button className='px-7 py-3'> Say Hello <TbLocation /></Button>
         <div className="border border-white opacity-20 mx-5 my-1.5"></div>
-        <div className="font-semibold text-xl flex items-center gap-3">
+        <div className="font-semibold text-2xl  flex items-center gap-3">
           <Link href="https://www.linkedin.com/in/hasibur-rahman19/" target="_blank">
-            <IoLogoLinkedin className="opacity-50 hover:opacity-100 hover:scale-110 transition-all duration-300 text-white" />
+            <IoLogoLinkedin className="opacity-60 text-white hover:opacity-100 hover:scale-110 transition-all duration-300" />
           </Link>
           <Link href="https://github.com/HSBHasib" target="_blank">
-            <BsGithub className="opacity-50 hover:opacity-100 hover:scale-110 transition-all duration-300 text-white" />
+            <BsGithub className="opacity-60 hover:opacity-100 hover:scale-110 transition-all duration-300 text-white" />
           </Link>
         </div>
       </motion.div>
