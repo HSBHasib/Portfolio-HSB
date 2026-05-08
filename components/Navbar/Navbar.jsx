@@ -1,6 +1,7 @@
 "use client";
 import React from "react";
-import { IconHome, IconMessage } from "@tabler/icons-react";
+import { IconHome } from "@tabler/icons-react";
+import { PiImageDuotone } from "react-icons/pi";
 import { GoStack } from "react-icons/go";
 import { TbLocation } from "react-icons/tb";
 import Image from "next/image";
@@ -11,7 +12,7 @@ export function Navbar() {
   const navItems = [
     { name: "Home", link: "/", icon: <IconHome className="h-4 w-4" /> },
     { name: "Tech Stack", link: "#techstack", icon: <GoStack className="h-4 w-4" /> },
-    { name: "Projects", link: "#projects", icon: <IconMessage className="h-4 w-4" /> },
+    { name: "Projects", link: "#projects", icon: <PiImageDuotone className="h-4 w-4" /> },
     { name: "Contact", link: "#contact", icon: <TbLocation className="h-4 w-4" /> }
   ];
 
