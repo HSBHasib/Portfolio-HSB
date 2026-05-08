@@ -1,0 +1,30 @@
+ .blob_container {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  overflow: hidden;
+  border: 3.5px solid transparent;
+  /* background: linear-gradient(#09090b, #09090b) padding-box,
+              linear-gradient(135deg, #a855f7, #6366f1) border-box; */
+  background: linear-gradient(#09090b, #09090b) padding-box,
+              linear-gradient(135deg, #a855f797, #6366f197) border-box;
+/* background: gray; */
+
+              
+  animation: morphing 8s ease-in-out infinite;
+  box-shadow: 0 0 40px rgba(168, 85, 247, 0.2);
+}
+
+@keyframes morphing {
+  0%, 100% { border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%; }
+  25% { border-radius: 45% 55% 74% 26% / 36% 65% 35% 64%; }
+  50% { border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%; }
+  75% { border-radius: 55% 45% 34% 66% / 65% 35% 65% 35%; }
+}
+
+@media (max-width: 768px) {
+  .blob_container {
+    width: 250px;
+    height: 250px;
+  }
+}

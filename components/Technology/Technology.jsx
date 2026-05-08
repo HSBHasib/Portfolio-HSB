@@ -10,12 +10,10 @@ import TechIcons from "./TechIcons";
 import Skills from "../Skills/Skills";
 
 const Technology = () => {
-  const [loading, setLoading] = useState(true);
+  const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
-    // Artificial delay to show skeleton loading
-    const timer = setTimeout(() => setLoading(false), 1200);
-    return () => clearTimeout(timer);
+    setMounted(true);
   }, []);
 
   const techStack = [
@@ -33,7 +31,7 @@ const Technology = () => {
   return (
     <div
       id="techstack"
-      className="h-full mt-8 max-w-5xl mx-auto px-4"
+      className="h-full max-w-5xl mx-auto px-4"
     >
       {/* Header Animation */}
       <motion.div
@@ -52,8 +50,8 @@ const Technology = () => {
 
       {/* Tech Grid */}
       <div className="flex flex-wrap gap-6 justify-center mt-10">
-        {loading
-          ? // Skeleton Loading State
+        {!mounted
+          ? 
             Array(9)
               .fill(0)
               .map((_, i) => (
@@ -65,7 +63,7 @@ const Technology = () => {
                   <div className="h-2 w-10 bg-white/5 rounded"></div>
                 </div>
               ))
-          : // Actual Tech Icons
+          : 
             techStack.map((tech, index) => (
               <TechIcons
                 key={index}

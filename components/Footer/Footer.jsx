@@ -1,24 +1,20 @@
 import Link from "next/link";
 import React from "react";
-import { FaFacebook } from "react-icons/fa";
-import { ImLinkedin } from "react-icons/im";
-import { BsGithub, BsTwitterX } from "react-icons/bs";
-import { RiInstagramFill } from "react-icons/ri";
+import { BsGithub } from "react-icons/bs";
 import { IoLogoLinkedin } from "react-icons/io5";
 import { MdEmail, MdOutlineCopyright } from "react-icons/md";
-import Image from "next/image";
 
 const Footer = () => {
   return (
-    <footer className="mt-6 border-t border-gray-800 text-left">
-      <div className="px-6 py-16 md:pt-12 pb-8 max-w-6xl mx-auto">
+    <footer className="mt-10 border-t border-gray-800 text-left">
+      <div className="px-6 py-16 md:pt-12 pb-8 max-w-5xl mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-6 gap-12">
           {/* Name */}
           <div className="md:col-span-4">
             <h2 className="text-xl font-bold tracking-tighter mb-2 bg-gradient-to-b from-neutral-50 to-neutral-400 bg-clip-text text-transparent">
               Hasibur Rahman
             </h2>
-            <p className="text-sm opacity-88 leading-relaxed font-medium max-w-[45%]">
+            <p className="text-sm opacity-88 leading-relaxed font-medium max-w-[45%] text-neutral-400">
               Frontend Developer passionate about creating beautiful and functional web experience
             </p>
           </div>
@@ -28,11 +24,11 @@ const Footer = () => {
               <h3 className="text-[16px] font-bold uppercase mb-3 bg-gradient-to-b from-neutral-50 to-neutral-400 bg-clip-text text-transparent">
                 Quick Links
               </h3>
-              <ul className="space-y-2 text-sm font-medium ml-0.5 opacity-88">
+              <ul className="space-y-2 text-sm font-medium ml-0.5 opacity-88 text-neutral-400">
                 <li>
                   <Link
                     href="/"
-                    className="hover:opacity-60 transition-opacity flex gap-2"
+                    className="hover:underline transition-opacity flex gap-2"
                   >
                     About
                   </Link>
@@ -40,7 +36,7 @@ const Footer = () => {
                 <li>
                   <Link
                     href="/"
-                    className="hover:opacity-60 transition-opacity flex gap-2"
+                    className="hover:underline transition-opacity flex gap-2"
                   >
                     Skills
                   </Link>
@@ -48,7 +44,7 @@ const Footer = () => {
                 <li>
                   <Link
                     href="/"
-                    className="hover:opacity-60 transition-opacity flex gap-2 pl-0.5"
+                    className="hover:underline transition-opacity flex gap-2 pl-0.5"
                   >
                     Projects
                   </Link>
@@ -56,7 +52,7 @@ const Footer = () => {
                 <li>
                   <Link
                     href="/"
-                    className="hover:opacity-60 transition-opacity flex gap-2 pl-0.5"
+                    className="hover:underline transition-opacity flex gap-2 pl-0.5"
                   >
                     Contact
                   </Link>
@@ -116,3 +112,8 @@ const Footer = () => {
 };
 
 export default Footer;
+
+
+{/* <p className="text-neutral-500 text-sm font-medium italic">
+          My Introduction
+        </p> */}

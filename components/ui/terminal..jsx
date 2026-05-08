@@ -381,7 +381,7 @@ export function Terminal({
   return (
     <div
       ref={containerRef}
-      className={cn("mx-auto w-full max-w-xl px-4 font-mono text-xs", className)}>
+      className={cn("mx-auto w-full max-w-lg px-4 font-mono text-xs", className)}>
       <div
         className="overflow-hidden rounded-lg border border-neutral-800 bg-neutral-900 shadow-2xl">
         {/* Title Bar */}

@@ -11,7 +11,7 @@ const TechIcons = ({ children, className, icon, index }) => {
       viewport={{ once: true }}
       transition={{ 
         duration: 0.4, 
-        delay: index * 0.1, // Protiti icon alada somoye asbe
+        delay: index * 0.1, 
         ease: "easeOut" 
       }}
       className="flex flex-col items-center gap-2 group"

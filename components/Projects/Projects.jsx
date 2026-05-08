@@ -1,92 +1,7 @@
-// "use client";
-
-// import React from "react";
-
-// import ProjcetCards from "./ProjcetCards";
-
-// export function Projects() {
-
-//     const projectDets = [
-//         {
-//             id: 1,
-//             img: "/tiles.png",
-//             name: "Tiles Gellary",
-//             des: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dicta libero qui dolorem explicabo doloribus. Provident accusamus, pariatur illum, magnam, ratione eius voluptatem voluptatibus aliquam quibusdam itaque id similique totam laudantium?",
-//             tech: ["Javascript", "Tailwind Css", "NextJs", "MongoDB"],
-//             github: "https://github.com/HSBHasib/PH-ASSIGNMENT-08",
-//             live: "https://ph-assignment-08-nu.vercel.app/"
-
-//         },
-//         {
-//             id: 2,
-//             img: "/pixgen.png",
-//             name: "Pixgen",
-//             des: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dicta libero qui dolorem explicabo doloribus. Provident accusamus, pariatur illum, magnam, ratione eius voluptatem voluptatibus aliquam quibusdam itaque id similique totam laudantium?",
-//             tech: ["Javascript", "Tailwind Css", "NextJs", "MongoDB"],
-//             github: "https://github.com/HSBHasib/NextJs-Pixgen-PJ",
-//             live: "https://next-js-pixgen-pj.vercel.app/"
-
-//         },
-//         {
-//             id: 3,
-//             img: "/bpl.png",
-//             name: "BPL Dream",
-//             des: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dicta libero qui dolorem explicabo doloribus. Provident accusamus, pariatur illum, magnam, ratione eius voluptatem voluptatibus aliquam quibusdam itaque id similique totam laudantium?",
-//             tech: ["Javascript", "Tailwind Css", "React"],
-//             github: "https://github.com/HSBHasib/React-BPL-Dream-11-PJ",
-//             live: "https://react-bpl-dream-11-pj.vercel.app/"
-
-//         },
-//         {
-//             id: 4,
-//             name: "Pixgen",
-//             des: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dicta libero qui dolorem explicabo doloribus. Provident accusamus, pariatur illum, magnam, ratione eius voluptatem voluptatibus aliquam quibusdam itaque id similique totam laudantium?",
-//             tech: ["Javascript", "Tailwind Css", "NextJs", "MongoDB"],
-
-//         },
-//         {
-//             id: 5,
-//             name: "Pixgen",
-//             des: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dicta libero qui dolorem explicabo doloribus. Provident accusamus, pariatur illum, magnam, ratione eius voluptatem voluptatibus aliquam quibusdam itaque id similique totam laudantium?",
-//             tech: ["Javascript", "Tailwind Css", "NextJs", "MongoDB"],
-
-//         },
-//         {
-//             id: 6,
-//             name: "Pixgen",
-//             des: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dicta libero qui dolorem explicabo doloribus. Provident accusamus, pariatur illum, magnam, ratione eius voluptatem voluptatibus aliquam quibusdam itaque id similique totam laudantium?",
-//             tech: ["Javascript", "Tailwind Css", "NextJs", "MongoDB"],
-
-//         },
-//     ]
-
-//   return (
-//     <div className="h-full md:mt-12 mt-6 md:max-w-5xl md:mx-auto mx-6">
-//       {/* Projects Heading */}
-//       <div className="space-y-2">
-//         <h2 className="bg-gradient-to-b from-neutral-50 to-neutral-400 bg-clip-text text-xl md:text-4xl font-bold text-transparent">
-//           Projects
-//         </h2>
-//         <p className="bg-gradient-to-b from-neutral-50 to-neutral-400 bg-clip-text text-sm font-semibold text-transparent">
-//           Recent projects
-//         </p>
-//       </div>
-
-//       {/* Card */}
-//       <div className="grid md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-4 my-10">
-
-//         {
-//             projectDets.map(pj => <ProjcetCards key={pj.id} data={pj} /> )
-//         }
-
-//       </div>
-//     </div>
-//   );
-// }
-
 "use client";
+
 import React, { useState, useEffect } from "react";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion"; // AnimatePresence add kora holo smooth transition-er jonno
 import ProjcetCards from "./ProjcetCards";
 
 // Swiper imports
@@ -101,11 +16,10 @@ import "swiper/css/navigation";
 import "./Project.css";
 
 export function Projects() {
-  const [loading, setLoading] = useState(true);
+  const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
-    const timer = setTimeout(() => setLoading(false), 1200);
-    return () => clearTimeout(timer);
+    setMounted(true);
   }, []);
 
   const projectDets = [
@@ -174,13 +88,10 @@ export function Projects() {
         initial={{ opacity: 0, x: -20 }}
         whileInView={{ opacity: 1, x: 0 }}
         viewport={{ once: true }}
-        /* justification thik korar jonno ekhane change kora hoyeche */
         className="space-y-1 mb-10 px-2 flex justify-between items-end relative"
       >
-        {/* 1. Left Spacer: Desktop-e arrow er shathe balance rakhar jonno ekta hidden div */}
         <div className="hidden md:block w-[100px]"></div>
 
-        {/* 2. Middle Content: Projects Text */}
         <div className="text-center flex-1">
           <h2 className="bg-gradient-to-b from-neutral-50 pb-1 to-neutral-400 bg-clip-text text-2xl md:text-4xl font-bold text-transparent">
             Projects
@@ -190,7 +101,6 @@ export function Projects() {
           </p>
         </div>
 
-        {/* 3. Right Content: Arrows */}
         <div className="hidden md:flex gap-4 mb-2 w-[100px] justify-end">
           <button className="p-2 rounded-full border border-white/10 hover:bg-white/10 transition-all project-prev text-white active:scale-90">
             <FiChevronLeft size={24} />
@@ -201,49 +111,61 @@ export function Projects() {
         </div>
       </motion.div>
 
-      {loading ? (
-        <div className="grid md:grid-cols-3 grid-cols-1 gap-6 animate-pulse px-2">
-          {[1, 2, 3].map((i) => (
-            <div key={i} className="h-[450px] bg-white/5 rounded-2xl"></div>
-          ))}
-        </div>
-      ) : (
-        <div className="relative group px-2">
-          <Swiper
-            modules={[Pagination, Navigation]}
-            spaceBetween={24}
-            grabCursor={true}
-            navigation={{
-              nextEl: ".project-next",
-              prevEl: ".project-prev",
-            }}
-            pagination={{
-              clickable: true,
-              dynamicBullets: true,
-              dynamicMainBullets: 3,
-              // Type fraction dile user "1 / 10" eirokom text dekhbe (optional)
-              // Kintu amra bullets-e numbering thakbo jate user click korte pare
-              renderBullet: function (index, className) {
-                return (
-                  '<span class="' + className + '">' + (index + 1) + "</span>"
-                );
-              },
-            }}
-            breakpoints={{
-              320: { slidesPerView: 1, slidesPerGroup: 1 },
-              768: { slidesPerView: 2, slidesPerGroup: 2 },
-              1024: { slidesPerView: 3, slidesPerGroup: 3 },
-            }}
-            className="mySwiper !pb-20"
+      <AnimatePresence mode="wait">
+        {!mounted ? (
+          // Natural Skeleton State
+          <motion.div 
+            key="skeleton"
+            exit={{ opacity: 0 }}
+            className="grid md:grid-cols-3 grid-cols-1 gap-6 animate-pulse px-2"
           >
-            {projectDets.map((pj) => (
-              <SwiperSlide key={pj.id}>
-                <ProjcetCards data={pj} />
-              </SwiperSlide>
+            {[1, 2, 3].map((i) => (
+              <div key={i} className="h-[450px] bg-white/5 rounded-2xl"></div>
             ))}
-          </Swiper>
-        </div>
-      )}
+          </motion.div>
+        ) : (
+          // Actual Swiper Content
+          <motion.div 
+            key="content"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.5 }}
+            className="relative group px-2"
+          >
+            <Swiper
+              modules={[Pagination, Navigation]}
+              spaceBetween={24}
+              grabCursor={true}
+              navigation={{
+                nextEl: ".project-next",
+                prevEl: ".project-prev",
+              }}
+              pagination={{
+                clickable: true,
+                dynamicBullets: true,
+                dynamicMainBullets: 3,
+                renderBullet: function (index, className) {
+                  return (
+                    '<span class="' + className + '">' + (index + 1) + "</span>"
+                  );
+                },
+              }}
+              breakpoints={{
+                320: { slidesPerView: 1, slidesPerGroup: 1 },
+                768: { slidesPerView: 2, slidesPerGroup: 2 },
+                1024: { slidesPerView: 3, slidesPerGroup: 3 },
+              }}
+              className="mySwiper !pb-20"
+            >
+              {projectDets.map((pj) => (
+                <SwiperSlide key={pj.id}>
+                  <ProjcetCards data={pj} />
+                </SwiperSlide>
+              ))}
+            </Swiper>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </div>
   );
 }
