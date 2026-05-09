@@ -1,4 +1,3 @@
-
 "use client";
 
 import Image from "next/image";
@@ -11,7 +10,10 @@ const SkeletonAbout = () => (
     <div className="w-full md:flex-1 flex flex-col gap-8">
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
         {[1, 2, 3].map((i) => (
-          <div key={i} className="h-24 bg-[#1a1a1a] rounded-2xl border border-white/5" />
+          <div
+            key={i}
+            className="h-24 bg-[#1a1a1a] rounded-2xl border border-white/5"
+          />
         ))}
       </div>
       <div className="space-y-4">
@@ -74,7 +76,7 @@ const AboutPage = () => {
             <SkeletonAbout />
           </motion.div>
         ) : (
-          <motion.div 
+          <motion.div
             key="content"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -111,16 +113,20 @@ const AboutPage = () => {
               >
                 {[
                   { label: "Developer", sub: "MERN Stack" },
+                  { label: "Consistency", sub: "100% Daily Hustle" },
                   { label: "10+", sub: "Projects" },
-                  { label: "Support", sub: "Online 24/7" },
                 ].map((card, index) => (
                   <motion.div
                     key={index}
                     variants={fadeInUp}
                     className="bg-gradient-to-br from-[#1a1a1a] to-[#0a0a0a] p-5 rounded-2xl border border-white/5 flex flex-col items-center justify-center text-center shadow-lg"
                   >
-                    <p className="text-neutral-300 text-xl font-bold">{card.label}</p>
-                    <p className="text-neutral-500 text-xs mt-1 font-semibold">{card.sub}</p>
+                    <p className="text-neutral-300 text-xl font-bold">
+                      {card.label}
+                    </p>
+                    <p className="text-neutral-500 text-xs mt-1 font-semibold">
+                      {card.sub}
+                    </p>
                   </motion.div>
                 ))}
               </motion.div>
@@ -133,13 +139,20 @@ const AboutPage = () => {
                 className="text-[15px] md:text-base text-neutral-400 font-medium leading-relaxed italic space-y-4 text-center md:text-left px-2 md:px-0"
               >
                 <p>
-                  I am a developer driven by the pursuit of visual excellence and
-                  functional perfection. My work merges minimalist design with
-                  state-of-the-art interactive aesthetics.
+                  I’m a Frontend Developer who loves turning ideas into reality
+                  using code. I spend most of my time building fast and clean
+                  websites with Next.js and Tailwind CSS, always making sure my components are reusable and my architecture is solid.
                 </p>
                 <p>
-                  With a focus on performance and clean architecture, I build
-                  applications that are not just tools, but experiences.
+                  I really care about how a website looks and feels for the users. Right now, I’m
+                  focused on mastering the MERN stack to become a better
+                  Full stack developer.
+                </p>
+                <p>
+                  My plan is to keep building great projects, gain some real world experience, and eventually dive
+                  deep into DSA to make my code even more efficient. I’m always
+                  learning and always pushing myself to build better digital
+                  experiences.
                 </p>
               </motion.div>
             </div>
@@ -149,9 +162,13 @@ const AboutPage = () => {
 
       <style jsx global>{`
         @keyframes shimmer {
-          100% { transform: translateX(100%); }
+          100% {
+            transform: translateX(100%);
+          }
         }
-        .animate-shimmer { animation: shimmer 1.5s infinite; }
+        .animate-shimmer {
+          animation: shimmer 1.5s infinite;
+        }
       `}</style>
     </div>
   );

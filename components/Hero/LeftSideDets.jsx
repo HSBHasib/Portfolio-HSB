@@ -21,7 +21,7 @@ const LeftSideDets = ({ isLoaded }) => {
     );
   }
 
-  const word = `⚡Building modern, high-performance, and responsive websites. | Transforming ideas into functional digital solutions. 🚀`;
+  const word = `⚡Passionate Frontend Developer specializing in building scalable, user-centric web applications. I bridge the gap between complex backend logic and seamless frontend experiences using the MERN stack and Next.js.🚀`;
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -41,11 +41,11 @@ const LeftSideDets = ({ isLoaded }) => {
       <motion.h1 variants={itemVariants} className="bg-opacity-50 bg-gradient-to-b from-neutral-50 to-neutral-400 bg-clip-text text-4xl font-bold text-transparent md:text-6xl mt-0.5 md:mt-1">
         Hasibur Rahman
       </motion.h1>
-      <motion.h1 variants={itemVariants} className="bg-opacity-50 bg-gradient-to-b from-neutral-50 to-neutral-400 bg-clip-text text-xl font-semibold text-transparent md:text-xl my-4">
+      <motion.h1 variants={itemVariants} className="bg-opacity-50 bg-gradient-to-b from-neutral-50 to-neutral-400 bg-clip-text text-xl font-semibold text-transparent md:text-xl mt-4">
         A Frontend Developer based in Bangladesh
       </motion.h1>
       <motion.div variants={itemVariants}>
-        <TextGenerateEffect className="max-w-[500px] max-[768px]:mx-auto text-base font-semibold text-neutral-300" words={word} />
+        <TextGenerateEffect className="max-w-[500px] max-[768px]:mx-auto text-[15px] font-semibold text-neutral-300" words={word} />
       </motion.div>
       <motion.div variants={itemVariants} className="mt-6 flex md:justify-start justify-center">
         <Button className='px-7 py-3'> Say Hello <TbLocation /></Button>

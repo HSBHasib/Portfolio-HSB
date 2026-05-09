@@ -27,7 +27,7 @@ const Footer = () => {
               <ul className="space-y-2 text-sm font-medium ml-0.5 opacity-88 text-neutral-400">
                 <li>
                   <Link
-                    href="/"
+                    href="#about"
                     className="hover:underline transition-opacity flex gap-2"
                   >
                     About
@@ -35,7 +35,7 @@ const Footer = () => {
                 </li>
                 <li>
                   <Link
-                    href="/"
+                    href="#skills"
                     className="hover:underline transition-opacity flex gap-2"
                   >
                     Skills
@@ -43,7 +43,7 @@ const Footer = () => {
                 </li>
                 <li>
                   <Link
-                    href="/"
+                    href="#projects"
                     className="hover:underline transition-opacity flex gap-2 pl-0.5"
                   >
                     Projects
@@ -51,7 +51,7 @@ const Footer = () => {
                 </li>
                 <li>
                   <Link
-                    href="/"
+                    href="#contact"
                     className="hover:underline transition-opacity flex gap-2 pl-0.5"
                   >
                     Contact
