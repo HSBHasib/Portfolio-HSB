@@ -113,7 +113,3 @@ const Footer = () => {
 
 export default Footer;
 
-
-{/* <p className="text-neutral-500 text-sm font-medium italic">
-          My Introduction
-        </p> */}
