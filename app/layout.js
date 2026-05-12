@@ -1,6 +1,7 @@
 import SmoothScroll from "@/components/SmoothScroll";
 import "./globals.css";
 import { Navbar } from "@/components/Navbar/Navbar";
+import { Toaster } from "react-hot-toast";
 
 export const metadata = {
   title: "Hasib Portfolio",
@@ -14,6 +15,8 @@ export default function RootLayout({ children }) {
         <SmoothScroll>
           <Navbar />
           {children}
+
+          <Toaster />
         </SmoothScroll>
       </body>
     </html>
