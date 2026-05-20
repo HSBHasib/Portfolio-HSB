@@ -25,75 +25,89 @@ export function Projects() {
   const projectDets = [
     {
       id: 1,
-      img: "/tiles.png",
-      name: "Tiles Gallery",
-      des: "Editorial collection for artisanal surfaces.",
-      tech: ["NextJs", "SwiperJS", "MongoDB"],
-      github: "https://github.com/HSBHasib/PH-ASSIGNMENT-08",
-      live: "https://ph-assignment-08-nu.vercel.app/",
+      img: "/docApp.png",
+      name: "DocAppointment",
+      des: "A modern medical booking application, featuring dynamic specialist catalogs, seamless scheduling via interactive modals, and secure multi route user dashboard management.",
+      tech: [
+        "Next.js",
+        "Javascript",
+        "Node.js",
+        "Express",
+        "MongoDB",
+        "BetterAuth",
+        "SwiperJS",
+      ],
+      github: "https://github.com/HSBHasib/PH-ASSIGNMENT-09-Client-Side",
+      live: "https://docappointment-client.vercel.app/",
     },
     {
       id: 2,
-      img: "/pixgen.png",
-      name: "PixGen",
-      des: "AI image generation platform with BetterAuth.",
-      tech: ["NextJs", "BetterAuth", "MongoDB"],
-      github: "https://github.com/HSBHasib/NextJs-Pixgen-PJ",
-      live: "https://next-js-pixgen-pj.vercel.app/",
+      img: "/tiles.png",
+      name: "Tiles Gallery",
+      des: "An editorial collection and showcase for premium interior surfaces, featuring dynamic real time search, interactive masonry layouts, and secure multi route user dashboard management.",
+      tech: ["Next.js", "Javascript", "BetterAuth", "MongoDB", "SwiperJS"],
+      github: "https://github.com/HSBHasib/Tiles-Gallery-A8",
+      live: "https://tilesgallery-gbpq6kw46-hsbhasi.vercel.app/",
     },
     {
       id: 3,
-      img: "/bpl.png",
-      name: "BPL Dream",
-      des: "Sports-themed squad management application.",
-      tech: ["React", "Javascript", "Tailwind"],
-      github: "https://github.com/HSBHasib/React-BPL-Dream-11-PJ",
-      live: "https://react-bpl-dream-11-pj.vercel.app/",
+      img: "/keenkeeper.png",
+      name: "KeenKeeper",
+      des: "A modern friendship management web application, featuring interactive data charts, robust metric trackers, and secure personalized profiles designed to visualize and organize connections seamlessly.",
+      tech: ["React", "Javascript", "Tailwind CSS", "Recharts", "Context API"],
+      github: "https://github.com/HSBHasib/KeenKeeper-A7",
+      live: "https://keenkeeper-five.vercel.app/",
     },
     {
       id: 4,
-      img: "/keenkeeper.png",
-      name: "KeenKeeper",
-      des: "Friendship management web application.",
-      tech: ["React", "Tailwind", "Recharts"],
-      github: "https://github.com/HSBHasib/PH-ASSIGNMENT-07",
-      live: "https://ph-assignment-07-sigma.vercel.app/",
+      img: "/digitool.png",
+      name: "Digitool Platform",
+      des: "An authentication based image generation platform, featuring robust security layers, cloud database configurations, and dynamic asset dashboards designed to handle digital workflows seamlessly.",
+      tech: [
+        "Next.js",
+        "Javascript",
+        "BetterAuth",
+        "MongoDB Atlas",
+        "Tailwind CSS",
+      ],
+      github: "https://github.com/HSBHasib/Digital-Tools-A6",
+      live: "https://digitaltools-one.vercel.app/",
     },
     {
       id: 5,
-      img: "/digitool.png",
-      name: "Digitool Platform",
-      des: "Collaborative learning platform project.",
-      tech: ["MongoDB", "Express", "Node.js"],
-      github: "https://github.com/HSBHasib/PH-ASSIGNMENT-06",
-      live: "https://digitools-dg.netlify.app/",
+      img: "/book.png",
+      name: "Book Vibe",
+      des: "A modern digital library platform, featuring interactive book tracking lists, real time page-sort filters, and secure localStorage persistence designed to manage custom literature dashboards seamlessly.",
+      tech: ["React", "Javascript", "Tailwind CSS", "Recharts"],
+      github: "https://github.com/HSBHasib/React-Book-Vibe-PJ",
+      live: "https://react-book-vibe-omega.vercel.app/",
     },
     {
       id: 6,
-      img: "/book.png",
-      name: "Book Vibe",
-      des: "Collaborative learning platform project.",
-      tech: ["MongoDB", "Express", "Node.js"],
-      github: "https://github.com/HSBHasib/React-Book-Vibe-PJ",
-      live: "https://09-book-vibe.vercel.app/",
+      img: "/bpl.png",
+      name: "BPL Dream",
+      des: "A dynamic cricket team selection platform, featuring responsive player auction cards, real-time budget tracking constraints, and custom roster management filters for seamless squad building.",
+      tech: ["React", "Javascript", "Tailwind CSS"],
+      github: "https://github.com/HSBHasib/React-BPL-Dream-11-PJ",
+      live: "https://bpl-dream-orpin.vercel.app/",
     },
     {
       id: 7,
-      img: "/english.png",
-      name: "Enligsh Janala",
-      des: "Collaborative learning platform project.",
-      tech: ["MongoDB", "Express", "Node.js"],
-      github: "https://github.com/HSBHasib/PH-JS-English-Janala-PJ",
-      live: "https://ph-js-english-janala-pj.vercel.app/",
+      img: "/git.png",
+      name: "Github Issue Tracker",
+      des: "A responsive issues management dashboard, featuring dynamic multi tab pipeline filters, real time repository log search, and automated conditional border styling based on status tracking.",
+      tech: ["HTML5", "Tailwind CSS", "Javascript"],
+      github: "https://github.com/HSBHasib/Github-Issues-Tracker-A5",
+      live: "https://githubissuetracker.vercel.app/",
     },
     {
       id: 8,
-      img: "/git.png",
-      name: "Github Tracker",
-      des: "Collaborative learning platform project.",
-      tech: ["MongoDB", "Express", "Node.js"],
-      github: "https://github.com/HSBHasib/PH-ASSIGNMENT-05",
-      live: "https://github-issue-tracker-azure.vercel.app/",
+      img: "/english.png",
+      name: "Enligsh Janala",
+      des: "A dynamic language learning platform, featuring interactive text-to-speech pronunciation tools, real time query search filters, and responsive UI components designed to streamline educational workflows.",
+      tech: ["HTML5", "Tailwind CSS", "Javascript"],
+      github: "https://github.com/HSBHasib/PH-JS-English-Janala-PJ",
+      live: "https://english-janala-lyart.vercel.app/",
     },
   ];
 
@@ -132,7 +146,7 @@ export function Projects() {
       <AnimatePresence mode="wait">
         {!mounted ? (
           // Natural Skeleton State
-          <motion.div 
+          <motion.div
             key="skeleton"
             exit={{ opacity: 0 }}
             className="grid md:grid-cols-3 grid-cols-1 gap-6 animate-pulse px-2"
@@ -143,7 +157,7 @@ export function Projects() {
           </motion.div>
         ) : (
           // Actual Swiper Content
-          <motion.div 
+          <motion.div
             key="content"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
