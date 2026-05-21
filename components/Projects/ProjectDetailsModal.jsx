@@ -18,7 +18,7 @@ export default function ProjectModal({ isOpen, onClose, project }) {
     >
       <Modal.Backdrop variant="blur">
         <Modal.Container>
-          <Modal.Dialog className="sm:max-w-[520px] max-h-[73vh] flex flex-col bg-[#111111]/60 border border-white/10 text-neutral-200 rounded-2xl p-6 shadow-2xl">
+          <Modal.Dialog className="sm:max-w-[520px] max-h-[73vh] flex flex-col bg-[#111111]/70 border border-white/10 text-neutral-200 rounded-2xl p-6 shadow-2xl">
             
             {/* Close Trigger Button */}
             <Modal.CloseTrigger 
