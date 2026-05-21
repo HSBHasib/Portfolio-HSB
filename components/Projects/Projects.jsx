@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
-import { motion, AnimatePresence } from "framer-motion"; // AnimatePresence add kora holo smooth transition-er jonno
+import { motion, AnimatePresence } from "framer-motion";
 import ProjcetCards from "./ProjcetCards";
 
 // Swiper imports
@@ -37,6 +37,12 @@ export function Projects() {
         "BetterAuth",
         "SwiperJS",
       ],
+      features: [
+        "Implements multi-role user session authentication protocols via custom BetterAuth route configuration layouts.",
+        "Processes advanced data sorting algorithms for interactive multi-specialty category browsing panels.",
+        "Manages automated workspace appointment slots with real-time responsive state synchronizations.",
+        "Deploys persistent server-side schema validations safeguarding non-relational database record endpoints.",
+      ],
       github: "https://github.com/HSBHasib/PH-ASSIGNMENT-09-Client-Side",
       live: "https://docappointment-client.vercel.app/",
     },
@@ -46,6 +52,12 @@ export function Projects() {
       name: "Tiles Gallery",
       des: "An editorial collection and showcase for premium interior surfaces, featuring dynamic real time search, interactive masonry layouts, and secure multi route user dashboard management.",
       tech: ["Next.js", "Javascript", "BetterAuth", "MongoDB", "SwiperJS"],
+      features: [
+        "Renders dynamic layout matrices displaying custom collections of curated surface design assets.",
+        "Integrates instant input keyup filters indexing large visual catalogs without performance drops.",
+        "Includes full administrative operational panels controlling live product item addition workflows.",
+        "Optimizes continuous visual loading speeds using structured modern image component layers.",
+      ],
       github: "https://github.com/HSBHasib/Tiles-Gallery-A8",
       live: "https://tilesgallery-gbpq6kw46-hsbhasi.vercel.app/",
     },
@@ -55,6 +67,12 @@ export function Projects() {
       name: "KeenKeeper",
       des: "A modern friendship management web application, featuring interactive data charts, robust metric trackers, and secure personalized profiles designed to visualize and organize connections seamlessly.",
       tech: ["React", "Javascript", "Tailwind CSS", "Recharts", "Context API"],
+      features: [
+        "Transforms individual connection parameters into fluid relational visual structures using Recharts maps.",
+        "Propagates synchronous data values throughout multi-nested node components via global Context layers.",
+        "Tracks user interaction frequency metrics utilizing automated chronological timeline logger fields.",
+        "Features rich profile dashboard cards displaying key engagement statistics with compact responsive charts.",
+      ],
       github: "https://github.com/HSBHasib/KeenKeeper-A7",
       live: "https://keenkeeper-five.vercel.app/",
     },
@@ -70,6 +88,12 @@ export function Projects() {
         "MongoDB Atlas",
         "Tailwind CSS",
       ],
+      features: [
+        "Executes persistent credential management states leveraging native secure session handler models.",
+        "Links individual accounts dynamically to remote non-relational database clusters on MongoDB Atlas.",
+        "Compiles custom asset management directories isolating private generative elements between active accounts.",
+        "Employs dynamic modal alerts tracking validation rule responses across all system fields.",
+      ],
       github: "https://github.com/HSBHasib/Digital-Tools-A6",
       live: "https://digitaltools-one.vercel.app/",
     },
@@ -79,6 +103,12 @@ export function Projects() {
       name: "Book Vibe",
       des: "A modern digital library platform, featuring interactive book tracking lists, real time page-sort filters, and secure localStorage persistence designed to manage custom literature dashboards seamlessly.",
       tech: ["React", "Javascript", "Tailwind CSS", "Recharts"],
+      features: [
+        "Persists multi-tab list variables across device reloads utilizing structured localStorage update loops.",
+        "Generates precise analytical volume comparisons plotting page counts via interactive bar charts.",
+        "Rearranges complex literary arrays on-the-fly through multi-criteria dropdown filter configurations.",
+        "Displays granular information models extracting targeted details when exploring deep data blocks.",
+      ],
       github: "https://github.com/HSBHasib/React-Book-Vibe-PJ",
       live: "https://react-book-vibe-omega.vercel.app/",
     },
@@ -88,6 +118,12 @@ export function Projects() {
       name: "BPL Dream",
       des: "A dynamic cricket team selection platform, featuring responsive player auction cards, real time budget tracking constraints, and custom roster management filters for seamless squad building.",
       tech: ["React", "Javascript", "Tailwind CSS"],
+      features: [
+        "Implements reactive numerical limit triggers guarding strict budget wallet parameters during bidding.",
+        "Synchronizes active listing catalogs with selection arrays using isolated state filter functions.",
+        "Manages instantaneous custom pop-up alerts intercepting logic breaches or duplications instantly.",
+        "Toggles view boundaries between core roster matrices seamlessly through dynamic navigation buttons.",
+      ],
       github: "https://github.com/HSBHasib/React-BPL-Dream-11-PJ",
       live: "https://bpl-dream-orpin.vercel.app/",
     },
@@ -97,6 +133,12 @@ export function Projects() {
       name: "Github Issue Tracker",
       des: "A responsive issues management dashboard, featuring dynamic multi tab pipeline filters, real time repository log search, and automated conditional border styling based on status tracking.",
       tech: ["HTML5", "Tailwind CSS", "Javascript"],
+      features: [
+        "Tracks real-time task status movements by updating relative DOM elements via event listeners.",
+        "Filters broad script item indexes instantaneously based on string search character matches.",
+        "Applies automated custom Tailwind border styles reacting dynamically to pipeline phase shifts.",
+        "Structures lightweight asset layers executing quick response rendering across various grid dimensions.",
+      ],
       github: "https://github.com/HSBHasib/Github-Issues-Tracker-A5",
       live: "https://githubissuetracker.vercel.app/",
     },
@@ -106,6 +148,12 @@ export function Projects() {
       name: "Enligsh Janala",
       des: "A dynamic language learning platform, featuring interactive text-to-speech pronunciation tools, live REST API data filtering, and responsive UI components for streamlined vocabulary tracking.",
       tech: ["HTML5", "Tailwind CSS", "Javascript"],
+      features: [
+        "Triggers instant verbal text-to-speech audio streams via native browser API integrations.",
+        "Fetches asynchronous level and lesson arrays from external REST endpoints flawlessly.",
+        "Filters target linguistic objects from continuous data loads without needing page refreshes.",
+        "Launches clean detailed info modals mapping extensive keyword metadata parameters dynamically.",
+      ],
       github: "https://github.com/HSBHasib/PH-JS-English-Janala-PJ",
       live: "https://english-janala-lyart.vercel.app/",
     },
@@ -201,3 +249,5 @@ export function Projects() {
     </div>
   );
 }
+
+
