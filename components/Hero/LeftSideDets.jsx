@@ -2,7 +2,7 @@
 
 import React from "react";
 import { motion } from "framer-motion";
-import { TbLocation } from "react-icons/tb";
+import { LuDownload } from "react-icons/lu";
 import { IoLogoLinkedin } from "react-icons/io5";
 import { BsGithub } from "react-icons/bs";
 import Link from "next/link";
@@ -73,10 +73,18 @@ const LeftSideDets = ({ isLoaded }) => {
         variants={itemVariants}
         className="mt-6 flex md:justify-start justify-center"
       >
-        <Button className="px-7 py-3">
-          {" "}
-          Say Hello <TbLocation />
-        </Button>
+        <Link
+          href="resume.pdf" // public ফোল্ডারে থাকা ফাইলের নাম (অবশ্যই public/resume.pdf থাকতে হবে)
+          download="Hasibur_Rahman_Resume.pdf" // ডিভাইস ডাউনলোড হওয়ার পর এই নামে সেভ হবে
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-block"
+        >
+          <Button className="px-7 py-3">
+            Get Resume <LuDownload size={16} />
+          </Button>
+        </Link>
+
         <div className="border border-white opacity-20 mx-5 my-1.5"></div>
         <div className="font-semibold text-2xl  flex items-center gap-3">
           {/* Linkedin */}
@@ -86,7 +94,7 @@ const LeftSideDets = ({ isLoaded }) => {
           >
             <IoLogoLinkedin className="opacity-60 text-white hover:opacity-100 hover:scale-110 transition-all duration-300" />
           </Link>
-          
+
           {/* Github */}
           <Link href="https://github.com/HSBHasib" target="_blank">
             <BsGithub className="opacity-60 hover:opacity-100 hover:scale-110 transition-all duration-300 text-white" />
@@ -97,9 +105,7 @@ const LeftSideDets = ({ isLoaded }) => {
             href="https://mail.google.com/mail/u/0/#inbox?compose=new"
             target="_blank"
           >
-            <MdEmail
-              className="opacity-60 hover:opacity-100 hover:scale-110 transition-all duration-300 text-white"
-            />
+            <MdEmail className="opacity-60 hover:opacity-100 hover:scale-110 transition-all duration-300 text-white" />
           </Link>
         </div>
       </motion.div>
@@ -108,3 +114,4 @@ const LeftSideDets = ({ isLoaded }) => {
 };
 
 export default LeftSideDets;
+

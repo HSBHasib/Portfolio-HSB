@@ -20,7 +20,7 @@ const ProjcetCards = ({ data }) => {
         <div className="w-full">
           {/* Image */}
           <CardItem
-            translateZ="40"
+            translateZ="50"
             className="w-full mb-5 relative overflow-hidden rounded-xl"
           >
             {!imgLoaded && (
@@ -80,7 +80,7 @@ const ProjcetCards = ({ data }) => {
 
             <button
               onClick={() => setIsModalOpen(true)}
-              className="flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg text-xs font-semibold text-black bg-white/80 hover:bg-neutral-200 transition-all active:scale-95 duration-300 cursor-pointer"
+              className="flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg text-xs font-semibold text-black bg-gradient-to-b from-neutral-50 to-neutral-400 hover:bg-gradient-to-b hover:from-neutral-100 hover:to-neutral-500 transition-all active:scale-95 duration-300 cursor-pointer"
             >
               Project Details
             </button>
