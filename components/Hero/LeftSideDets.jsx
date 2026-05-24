@@ -74,8 +74,8 @@ const LeftSideDets = ({ isLoaded }) => {
         className="mt-6 flex md:justify-start justify-center"
       >
         <Link
-          href="resume.pdf" // public ফোল্ডারে থাকা ফাইলের নাম (অবশ্যই public/resume.pdf থাকতে হবে)
-          download="Hasibur_Rahman_Resume.pdf" // ডিভাইস ডাউনলোড হওয়ার পর এই নামে সেভ হবে
+          href="resume.pdf" 
+          download="Hasibur_Rahman_Resume.pdf" 
           target="_blank"
           rel="noopener noreferrer"
           className="inline-block"
