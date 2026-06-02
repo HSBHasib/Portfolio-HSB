@@ -3,7 +3,7 @@
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { FaNodeJs, FaGitAlt, FaGithub } from "react-icons/fa";
-import { SiExpress, SiMongodb } from "react-icons/si";
+import { SiAuth0, SiExpress, SiMongodb } from "react-icons/si";
 import { GrReactjs } from "react-icons/gr";
 import { RiNextjsLine, RiTailwindCssFill } from "react-icons/ri";
 import TechIcons from "./TechIcons";
@@ -24,6 +24,7 @@ const Technology = () => {
     { name: "Node.js", icon: <FaNodeJs />, color: "text-green-600" },
     { name: "Express", icon: <SiExpress />, color: "text-neutral-400" },
     { name: "MongoDB", icon: <SiMongodb />, color: "text-green-600" },
+    { name: "BetterAuth", icon: <SiAuth0 />, color: "text-amber-400" },
     { name: "Git", icon: <FaGitAlt />, color: "text-orange-600" },
     { name: "Github", icon: <FaGithub />, color: "text-white" },
   ];
