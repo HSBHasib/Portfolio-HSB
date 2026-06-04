@@ -257,7 +257,7 @@ export function Terminal({
   outputs = {},
   username = "Hasib",
   className,
-  typingSpeed = 50,
+  typingSpeed = 14,
   delayBetweenCommands = 800,
   initialDelay = 500,
   enableSound = true
@@ -396,7 +396,7 @@ export function Terminal({
           </div>
           <div className="flex-1 text-center">
             <span className="truncate text-sm text-neutral-400">
-              {username} — bash
+              {username} — Skills
             </span>
           </div>
           <div className="w-[52px]" />

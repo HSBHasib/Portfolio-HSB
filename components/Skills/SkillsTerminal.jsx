@@ -48,6 +48,8 @@ export function SkillsTeminal({ isLoading }) {
             "✔ Express.js",
             "✔ MongoDB",
             "✔ RESTful APIs & Auth",
+            "✔ BetterAuth",
+            "✔ JWT",
           ]
         }}
             typingSpeed={45}

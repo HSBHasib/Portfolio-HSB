@@ -35,7 +35,7 @@ const Contact = () => {
   return (
     <div
       id="contact"
-      className="h-full py-12 px-6 md:px-0 max-w-3xl mx-auto overflow-hidden"
+      className="h-full py-12 px-6 md:px-2 max-w-3xl mx-auto overflow-hidden"
     >
       {/* Header Animation */}
       <motion.div

@@ -74,8 +74,7 @@ const LeftSideDets = ({ isLoaded }) => {
         className="mt-6 flex md:justify-start justify-center"
       >
         <Link
-          href="Hasibur_Rahman_Resume.pdf" 
-          download="Hasibur Rahman Resume.pdf" 
+          href="https://drive.google.com/file/d/1nOfb-_1BF-MNxmp3BnOd6MPLhanjXUn7/view?usp=drive_link" 
           target="_blank"
           rel="noopener noreferrer"
           className="inline-block"
