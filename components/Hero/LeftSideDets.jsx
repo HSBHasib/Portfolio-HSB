@@ -22,7 +22,7 @@ const LeftSideDets = ({ isLoaded }) => {
     );
   }
 
-  const word = `⚡Passionate Frontend Developer specializing in building scalable, user-centric web applications. I bridge the gap between complex backend logic and seamless frontend experiences using the MERN stack and Next.js.🚀`;
+  const word = `⚡Passionate Frontend Developer specializing in building scalable, user-centric web applications. I bridge the gap between complex backend logic and seamless frontend experiences using the MERN stack and Next.js.`;
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -65,7 +65,7 @@ const LeftSideDets = ({ isLoaded }) => {
       </motion.h1>
       <motion.div variants={itemVariants}>
         <TextGenerateEffect
-          className="max-w-[500px] max-[768px]:mx-auto text-[15px] font-semibold text-neutral-300"
+          className="max-w-[500px] max-[768px]:mx-auto text-[15px] font-semibold"
           words={word}
         />
       </motion.div>
