@@ -74,7 +74,7 @@ const LeftSideDets = ({ isLoaded }) => {
         className="mt-6 flex md:justify-start justify-center"
       >
         <Link
-          href="https://drive.google.com/file/d/1nOfb-_1BF-MNxmp3BnOd6MPLhanjXUn7/view?usp=drive_link" 
+          href="https://drive.google.com/file/d/1oEa45Wl0tynYp-vg1qhyrFsc6bZJdmE6/view?usp=drive_link" 
           target="_blank"
           rel="noopener noreferrer"
           className="inline-block"
